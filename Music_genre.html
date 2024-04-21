@@ -1,0 +1,65 @@
+<!-- Gage Eslick April 20th 2024-->
+<!DOCTYPE html>
+<html lang="en">
+    <!--The title of the website-->
+<head>
+    <title>Random Music Generator</title>
+    <link rel="stylesheet for music gen" href="stylesheet for music gen.css">
+</head>
+<body>
+    <!--The subtitle of the website with the navigation section-->
+    <header>
+        <h1>Random Music Generator</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-Link">Home</a></li>
+                <li><a href="#about" class="nav-Link">About</a></li>
+                <li><a href="#contact" class="nav-Link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--This is the description of what the button will do and this is the code of the button being created-->
+    <main>
+        <section id="home">
+            <p>This is the home page with the random generator</p>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>We are a random generator for helping you pick music and a generation</p>
+        </section>
+        <section id="contact">
+            <h1>Contact us</h1>
+            <p>Contact us at GESLICK86950@uat.edu if you have any issues.</p>
+        </section>
+        <section>
+            <h2>Random Genre and Era</h2>
+            <p>Click the button below to generate a random music genre and era.</p>
+            <button id="Click Me" onclick="generateRandom()">Click Me!!!</button>
+            <div id="output"></div>
+        </section>
+    </main>
+    <!--This is the description of the website-->
+    <aside>
+        <h2>About This Generator</h2>
+        <p>This website randomly selects a music genre and era combination to inspire you to a new music taste</p>
+    </aside>
+    <!--This is a footer making sure that the user knows that all the music suggestions the website gives is reserved to the owner-->
+    <footer>
+        <p>&copy; 2024 Random Music Generator. All music rights reserved to owner.</p>
+    </footer>
+    <!--This is the scriprt for the random generation for music-->
+    <script>
+        
+        function generateRandom() {
+            var genres = ["Rock", "Pop", "Jazz", "Hip Hop", "EDM", "Classical"];
+            var eras = ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"];
+
+            var randomGenre = genres[Math.floor(Math.random() * genres.length)];
+            var randomEra = eras[Math.floor(Math.random() * eras.length)];
+
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<p>Your random music suggestion is: " + randomGenre + " from the " + randomEra + "<p>";
+        }
+    </script>
+</body>    
+</html>
